@@ -4,8 +4,16 @@
 </head>
 <body>
   <nav>
+    <a href="/checkins">
+      <button type="submit">See all Check-Ins</button>
+    </a>
     <% if (user) { %>
-      <a href="/auth/logout">
+      <a href="/checkins/:id">
+        <button type="submit">Your Profile</button>
+      </a>
+    <% } %>
+    <% if (user) { %>
+      <a href="/auth/logout" class="logout-link">
         <button type="submit">Logout</button>
       </a>
     <% } else { %>
