@@ -12,11 +12,14 @@
     </div>
   <% } %>
   <p>Coffee Shop Tracker lets anyone, from the coffee enthusiest to someone is just discovering this magical elixer, to keep track of which shops and beverages they like the most. Enjoy, adding coffee shops and keeping track of places you'd love or never visit again.<br>Loggin to add a Shop! </p>
-  <a href="/auth/google" class="siwg-link">
-    <button type="submit" class="siwg">
-      <img id="siwg-image" alt="Sign in with Google" />
-    </button>
-  </a>
+  <% if (!user) { %>
+    <a href="/auth/google" class="siwg-link">
+      <button type="submit" class="siwg">
+        <img id="siwg-image" alt="Sign in with Google" />
+      </button>
+    </a>
+  <% } %>
+  
 </main>
 
 <%- include('./partials/footer') %>
