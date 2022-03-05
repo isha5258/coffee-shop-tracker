@@ -1,7 +1,4 @@
-import req from "express/lib/request"
-import res = require("express/lib/response")
-
-fucntion passUserToView(req, res, next) {
+function passUserToView(req, res, next) {
   res.local.user = req.user ? req.user : null
   next()
 }
