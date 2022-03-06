@@ -8,11 +8,12 @@
       <button type="submit">See all Check-Ins</button>
     </a>
     <% if (user) { %>
-      <a href="/checkins/:id">
+      <a class="profile-btn" href="/checkins/:id">
         <button type="submit">Your Profile</button>
       </a>
-    <% } %>
-    <% if (user) { %>
+      <a class="new-checkin-btn" href="/checkins/new">
+        <button type="submit">Add Check-In</button>
+      </a>
       <a href="/auth/logout" class="logout-link">
         <button type="submit">Logout</button>
       </a>

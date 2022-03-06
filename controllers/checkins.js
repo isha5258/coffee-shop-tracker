@@ -15,6 +15,28 @@ function index(req, res) {
   })
 }
 
+function newCheckin(req, res) {
+  res.render('checkins/new', {
+    title: 'Add Check-In',
+
+  })
+}
+
+function create(req, res) {
+  req.body.owner = req.user.profile._id
+  req.body.parking = !!req.body.parking
+  Checkin.create(req.body)
+  .then(checkin => {
+    res.redirect('/checkins')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/checkins')
+  })
+}
+
 export {
   index,
+  newCheckin as new,
+  create
 }

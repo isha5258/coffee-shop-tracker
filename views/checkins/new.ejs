@@ -1,0 +1,51 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<main>
+  <% if(user) { %> 
+  <form id="new-form" action="/checkins" method="POST">
+    <label for="coffee-shop-input">Coffee Shop Name:</label>
+      <input 
+        type="text" 
+        name="name" 
+        id="coffee-shop-input"
+      />
+    <label for="rating-input">Rating:</label>
+      <input 
+        id="rating-input" 
+        name="rating" 
+        type="number" 
+        min="1" 
+        max="5"
+      />
+    <label for="location-input">Location(City only):</label>
+      <input 
+        id="location-input" 
+        type="text" 
+        name="location" 
+        value="Ex. Denver"
+      />
+    <%# <label for="beverage-input">Beverage:</label>
+    <select name="beverage" id="beverage-input">
+      ***checkin.beverage.forEach(beverages => { 
+        <option value="beverages.name"></option>
+      ***}) 
+    </select>  %>
+    <label for="parking-checkbox">Is there convenient parking?</label>
+      <input 
+        type="checkbox"
+        name="parking"
+        id="parking-checkbox"
+      />
+    <label for="comment-input">Comments:</label>
+      <input 
+        type="text" 
+        name="comment" 
+        id="comment-input"
+      />
+    <button type="submit">Add Checkin</button>
+  </form>
+  <% } %>
+</main>
+
+
+<%- include('../partials/footer') %>
