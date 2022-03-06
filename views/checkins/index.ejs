@@ -1,0 +1,32 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+
+<main>
+  <h1> User Check-Ins</h1>
+  <ul>
+    <% checkins.forEach(checkin => { %>
+      <h1> <%= user.profile.name %> </h1>
+      <% if (user?.profile.avatar) { %>
+        <section>
+          <div>
+            <img
+              src="<%= user.profile.avatar %>"
+              alt="<%= user.profile.name %> avatar"
+            />
+          </div>
+      <% } %>
+          <div>
+            <li>
+              - <%= checkin.name %> 
+              - <%= checkin.rating %> 
+              - <%= checkin.location %> 
+              - <%= checkin.comment %> 
+              - <%= checkin.parking ? 'Has convenient parking' : 'Does not have convenient parking' %> 
+            </li>
+          </div>
+        </section>
+    <% }) %>
+  </ul>
+</main>
+
+<%- include('../partials/footer') %>

@@ -1,13 +1,17 @@
 import { Checkin } from '../models/checkin.js'
 
 
-function index() {
+function index(req, res) {
   Checkin.find({})
   .then(checkins => {
     res.render('checkins/index', {
       title: 'All Checkins',
-      checkins
+      checkins,
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect("/checkins")
   })
 }
 

@@ -1,11 +1,11 @@
 function passUserToView(req, res, next) {
-  res.local.user = req.user ? req.user : null
+  res.locals.user = req.user ? req.user : null
+  console.log(res.locals.user);
   next()
 }
 
 function isLoggedIn(req, res, next) {
-  if(req.isAuthenticated())
-  return next()
+  if(req.isAuthenticated()) return next()
   res.redirect('/auth/google')
 }
 

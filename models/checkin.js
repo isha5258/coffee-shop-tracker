@@ -9,6 +9,7 @@ const checkinSchema = new Schema({
 },
 location: String,
 comment: String,
+parking: Boolean,
 owner: {type: Schema.Types.ObjectId, ref: "Profile"}
 })
 

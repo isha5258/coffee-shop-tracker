@@ -57,16 +57,21 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 // custom middleware
-// app.use(passUserToView)
+app.use(passUserToView)
+
 
 // router middleware
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
 app.use('/checkins', checkinsRouter)
+
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
-  next(createError(404))
+next(createError(404))
 })
+
+
 
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
