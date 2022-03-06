@@ -1,13 +1,14 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/style.css">
 <%- include('../partials/nav') %>
 
 <main>
   <h1> User Check-Ins</h1>
   <ul>
     <% checkins.forEach(checkin => { %>
-      <h1> <%= user?.profile.name %> </h1>
+      <h1 class-="checkin-username"> <%= user?.profile.name %> </h1>
       <% if (user?.profile.avatar) { %>
-        <section>
+        <section class="checkin-section">
           <div>
             <img
               src="<%= user.profile.avatar %>"
@@ -16,13 +17,12 @@
           </div>
       <% } %>
           <div>
-            <li>
-              - <%= checkin.name %> 
-              - <%= checkin.rating %> 
-              - <%= checkin.location %> 
-              - <%= checkin.comment %> 
-              - <%= checkin.parking ? 'Has convenient parking' : 'Does not have convenient parking' %> 
-            </li>
+            <li id="checkin-name"><%= checkin.name %></li>
+            <li id="checkin-rating"><%= checkin.rating %></li>
+            <li id="checkin-location"><%= checkin.location %></li>
+            <li id="checkin-comment"><%= checkin.comment %></li>
+            <li id="checkin-parking"><%= checkin.parking ? 'Has convenient parking' : 'Does not have convenient parking' %></li>
+            
           </div>
         </section>
     <% }) %>
