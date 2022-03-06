@@ -42,7 +42,7 @@ body > main {
   margin: 100px 100px;
 }
 
-/* body > nav {
+body > nav {
   grid-area: nav;
   background-color: rgb(145, 85, 47);
   display: flex;
@@ -51,7 +51,14 @@ body > main {
   padding: 0;
 }
 
-h1 {
+nav > a {
+  margin: .5rem;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: #424748;
+}
+/* h1 {
   font-size: 3.6rem;
 }
 
@@ -60,13 +67,7 @@ h1 {
   justify-content: end;
 }
 
-nav > a {
-  margin: 20px;
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 5px;
-  color: #424748;
-}
+
 
 nav > a:visited {
   color: #424748;
@@ -79,7 +80,7 @@ nav > a:hover {
 
 nav > a.active {
   color: white;
-}
+} */
 
 /* .fas::before {
   font-family: "Font Awesome 5 Free";
