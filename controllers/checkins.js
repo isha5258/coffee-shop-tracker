@@ -2,8 +2,15 @@ import { Checkin } from '../models/checkin.js'
 
 
 function index() {
-  console.log('checkin sanity');
+  Checkin.find({})
+  .then(checkins => {
+    res.render('checkins/index', {
+      title: 'All Checkins',
+      checkins
+    })
+  })
 }
+
 export {
   index,
 }
