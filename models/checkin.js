@@ -11,7 +11,8 @@ location: String,
 comment: String,
 parking: Boolean,
 owner: {type: Schema.Types.ObjectId, ref: "Profile"},
-beverage: [{type: Schema.Types.ObjectId, ref: 'Beverage'}]
+beverage: [{type: Schema.Types.ObjectId, ref: 'Beverage'}],
+
 })
 
 const Checkin = mongoose.model('Checkin', checkinSchema)

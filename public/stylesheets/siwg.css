@@ -4,10 +4,14 @@
   border: none;
   width: 191px;
   height: 46px;
+  border-radius: 15px;
+  opacity: 100%;
+  padding: 0;
 }
 
 .siwg-link {
   display: inline-block;
+  border-radius: 50px;
 }
 
 .siwg:focus,
@@ -40,4 +44,5 @@
   padding: 0;
   position: absolute;
   width: 1px;
+  border-radius: 50%;
 }

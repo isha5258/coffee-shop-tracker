@@ -7,6 +7,7 @@ function index(req, res) {
     res.render('checkins/index', {
       title: 'All Checkins',
       checkins,
+      
     })
   })
   .catch(err => {
