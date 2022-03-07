@@ -68,9 +68,14 @@ function edit(req, res) {
   })
 }
 
+function update(req, res) {
+  console.log('edit my sanity');
+}
+
 export {
   index,
   newCheckin as new,
   create,
-  edit
+  edit,
+  update,
 }

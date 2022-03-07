@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 <main>
   <% if(user) { %> 
-  <form id="new-form" action="/checkins" method="POST">
+  <form id="new-form" action="/checkins?_method=PUT" method="POST">
     <label for="coffee-shop-input">Coffee Shop Name:</label>
       <input 
         type="text" 

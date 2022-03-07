@@ -13,6 +13,8 @@ router.get('/new', isLoggedIn, checkinsCtrl.new)
 router.post('/', isLoggedIn, checkinsCtrl.create)
 // GET - localhost:3000/checkins/:id/edit
 router.get('/:id/edit', isLoggedIn, checkinsCtrl.edit )
+// PUT - localhost:3000/checkins
+router.put('/', isLoggedIn, checkinsCtrl.update)
 
 export {
   router
