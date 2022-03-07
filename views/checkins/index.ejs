@@ -21,10 +21,11 @@
         <h3><%= checkin.owner.name %> </h3>
       <% } %>
           <div>
-            <li id="checkin-name"><%= checkin.name %></li>
-            <li id="checkin-rating"><%= checkin.rating %></li>
-            <li id="checkin-location"><%= checkin.location %></li>
-            <li id="checkin-comment"><%= checkin.comment %></li>
+            <li id="checkin-name">Coffee Shop: <%= checkin.name %></li>
+            <li id="checkin-rating">Rating: <%= checkin.rating %></li>
+            <li id="checkin-beverage">Drink: <%= checkin.beverage.name %> </li>
+            <li id="checkin-location">Location <%= checkin.location %></li>
+            <li id="checkin-comment">Comments <%= checkin.comment %></li>
             <li id="checkin-parking"><%= checkin.parking ? 'Has convenient parking' : 'Does not have convenient parking' %></li>
           </div>
         </section>
