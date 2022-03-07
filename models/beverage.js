@@ -5,7 +5,6 @@ const Schema = mongoose.Schema
 const beverageSchema = new Schema ({
   name: {
     type: String,
-    required: true,
     unique: true,
     lowercase: true},
   }, {

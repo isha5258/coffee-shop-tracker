@@ -6,7 +6,7 @@
   <h1> User Check-Ins</h1>
   <ul>
     <% checkins.forEach(checkin => { %>
-      <h1 class-="checkin-username"> <%= user?.profile.name %> </h1>
+      <h1 class-="checkin-username"> <%= checkin.owner.name %> </h1>
       <section class="checkin-section">
       <% if (user?.profile.avatar) { %>
         
@@ -17,15 +17,22 @@
             />
           </div>
       <% } %>
+      <% if (!user) { %>
+        <h3><%= checkin.owner.name %> </h3>
+      <% } %>
           <div>
             <li id="checkin-name"><%= checkin.name %></li>
             <li id="checkin-rating"><%= checkin.rating %></li>
             <li id="checkin-location"><%= checkin.location %></li>
             <li id="checkin-comment"><%= checkin.comment %></li>
             <li id="checkin-parking"><%= checkin.parking ? 'Has convenient parking' : 'Does not have convenient parking' %></li>
-            
           </div>
         </section>
+        <% if (checkin.owner.equals(user?.profile._id)) { %> 
+          <form action="/checkins/<%= checkin._id %>/edit" method="GET">
+            <button class="btn" type="submit">Edit Check-In</button>
+          </form>
+        <% } %>
     <% }) %>
   </ul>
 </main>
