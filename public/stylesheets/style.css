@@ -39,7 +39,7 @@ body > main {
   background-color: rgb(145, 85, 47);
   padding: 20px;
   min-height: 100%;
-  margin: 100px 100px;
+  margin: 50px;
 }
 
 body > nav {
@@ -63,9 +63,10 @@ nav > a {
   background-color: #e8eceb;
   padding: 15px;
   display: grid;
-  grid-template-columns: 25% 1fr;
+  grid-template-columns: 50% 1fr;
   grid-template-rows: 1fr;
   list-style: disc;
+  width: 100%;
 }
 
 h1 {

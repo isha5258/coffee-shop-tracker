@@ -7,8 +7,9 @@
   <ul>
     <% checkins.forEach(checkin => { %>
       <h1 class-="checkin-username"> <%= user?.profile.name %> </h1>
+      <section class="checkin-section">
       <% if (user?.profile.avatar) { %>
-        <section class="checkin-section">
+        
           <div>
             <img
               src="<%= user.profile.avatar %>"

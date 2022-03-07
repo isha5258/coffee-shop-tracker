@@ -2,8 +2,24 @@
 <link rel="stylesheet" href="/stylesheets/style.css">
 <%- include('../partials/nav') %>
 
-
+<main>
+  <% if (user) { %>
+    <form id="add-beverage-form" action="/beverages" method="POST">
+      <label for="name-input">Drink :</label>
+      <input type="text" name="name" id="name-input" required>
+      <button type="submit">Add Drink</button>
+    </form>
+  <% } %>
   <h1> Beverages </h1>
+  <div id="beverage-list">
+    <ul>
+      <% beverage.forEach(beverages => { %>
+        <li class="beverage-list"> <%= beverages.name %>  </li>
+      <% }) %>
+    </ul>
+  </div>
+</main>
+  
 
 
 <%- include('../partials/footer') %>

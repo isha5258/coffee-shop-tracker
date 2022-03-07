@@ -17,10 +17,17 @@ function index(req, res) {
 }
 
 function newCheckin(req, res) {
-  res.render('checkins/new', {
+  //Beverage.find({})
+  //.then(beverages => {
+    res.render('checkins/new', {
     title: 'Add Check-In',
-
+    //beverages,
   })
+  //})
+  // .catch(err => {
+  //   console.log(err)
+  //   res.redirect("/checkins")
+  // })
 }
 
 function create(req, res) {

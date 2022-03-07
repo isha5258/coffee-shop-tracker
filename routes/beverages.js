@@ -6,6 +6,9 @@ const router = Router()
 // GET - localhost:3000/beverages
 router.get('/', beveragesCtrl.index)
 
+// POST - localhost:3000/beverages
+router.post('/', beveragesCtrl.create)
+
 export {
   router
 }
