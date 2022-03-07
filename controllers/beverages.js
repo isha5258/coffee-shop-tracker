@@ -19,7 +19,7 @@ function create (req, res) {
   req.body.owner = req.user.profile._id
   Beverage.create(req.body)
   .then(beverage => {
-    console.log(req.body);
+    
   res.redirect('/beverages')
   })
   .catch(err => {

@@ -6,7 +6,6 @@ function index(req, res) {
   .populate('owner')
   .populate('beverage')
   .then(checkins => {
-    console.log(checkins);
     res.render('checkins/index', {
       title: 'All Checkins',
       checkins,
@@ -21,7 +20,6 @@ function index(req, res) {
 function newCheckin(req, res) {
   Beverage.find({})
   .then(beverages => {
-    console.log('passed in', beverages);
     res.render('checkins/new', {
     title: 'Add Check-In',
     beverages,
@@ -36,16 +34,13 @@ function newCheckin(req, res) {
 function create(req, res) {
   req.body.owner = req.user.profile._id
   req.body.parking = !!req.body.parking
-  console.log(req.body)
   Checkin.create(req.body)
   // .populate('beverage')
   .then(checkin => {
-  console.log(checkin)
   res.redirect('/checkins')
   })
   .catch(err => {
     console.log(err)
-    console.log(req.body.beverage);
     res.redirect('/checkins/new')
   })
 }
@@ -64,13 +59,38 @@ function edit(req, res) {
 })
   .catch(err => {
     console.log(err)
-    res.redirect("/tacos")
+    res.redirect("/checkins")
   })
 }
 
 function update(req, res) {
-  console.log('edit my sanity');
+  req.body.parking = !!req.body.parking
+  Checkin.findByIdAndUpdate(req.params.id, req.body)
+  .then(checkin => {
+      res.redirect('/checkins')
+      })
+  .catch(err => {
+    console.log("the error:", err)
+    res.redirect("/checkins")
+  })
 }
+
+
+// console.log(req.body)
+//   Checkin.findById(req.params.id)
+//   .populate('beverage')
+//   .then(checkin => {
+//     req.body.parking = !!req.body.parking
+//     checkin.updateOne(req.body, {new: true})
+//     .then(() => {
+//       res.redirect('/checkins')
+//     })
+//   })
+//   .catch(err => {
+//     console.log("the error:", err)
+//     res.redirect("/checkins")
+//   })
+// }
 
 export {
   index,

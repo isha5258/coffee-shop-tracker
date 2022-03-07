@@ -3,31 +3,31 @@
 <%- include('../partials/nav') %>
 <main>
   <% if(user) { %> 
-  <form id="new-form" action="/checkins?_method=PUT" method="POST">
-    <label for="coffee-shop-input">Coffee Shop Name:</label>
+  <form action="/checkins/<%= checkin._id %>?_method=PUT" method="POST">
+    <label for="edit-shop-input">Coffee Shop Name:</label>
       <input 
         type="text" 
         name="name" 
-        id="coffee-shop-input"
+        id="edit-shop-input"
         value="<%= checkin.name %> "
       >
-    <label for="rating-input">Rating:</label>
+    <label for="edit-rating-input">Rating:</label>
       <input 
-        id="rating-input" 
+        id="edit-rating-input" 
         name="rating" 
         type="number" 
         min="1" 
         max="5"
         value="<%= checkin.rating %>"
       >
-    <label for="location-input">Location(City only):</label>
+    <label for="edit-location-input">Location(City only):</label>
       <input 
-        id="location-input" 
+        id="edit-location-input" 
         type="text" 
         name="location" 
         value="<%= checkin.location %>"
       >
-      <label for="beverage-input">Drink:</label>
+      <label for="edit-beverage-input">Drink:</label>
     <select 
     name="beverage" 
     id="beverage-input"
@@ -36,18 +36,18 @@
         <option value="<%= beverage._id %>"><%= beverage.name %></option>
       <% }) %>
     </select>
-    <label for="parking-checkbox">Is there convenient parking?</label>
+    <label for="edit-parking-checkbox">Is there convenient parking?</label>
       <input 
         type="checkbox"
         name="parking"
-        id="parking-checkbox"
+        id="edit-parking-checkbox"
         value="<%= checkin.parking ? 'checked' : '' %>"
       >
-    <label for="comment-input">Comments:</label>
+    <label for="edit-comment-input">Comments:</label>
       <input 
         type="text" 
         name="comment" 
-        id="comment-input"
+        id="edit-comment-input"
         value="<%= checkin.comment %> "
       >
     <button type="submit">Add Checkin</button>
