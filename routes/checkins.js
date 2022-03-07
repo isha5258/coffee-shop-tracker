@@ -8,9 +8,9 @@ const router = Router()
 // GET - localhost:3000/checkins
 router.get('/', checkinsCtrl.index)
 // GET - localhost:3000/checkins/new
-router.get('/new', checkinsCtrl.new)
+router.get('/new', isLoggedIn, checkinsCtrl.new)
 // POST - localhost:3000/checkins
-router.post('/', checkinsCtrl.create)
+router.post('/', isLoggedIn, checkinsCtrl.create)
 // GET - localhost:3000/checkins/:id/edit
 router.get('/:id/edit', isLoggedIn, checkinsCtrl.edit )
 

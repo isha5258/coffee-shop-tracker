@@ -51,12 +51,20 @@ function create(req, res) {
 }
 
 function edit(req, res) {
+  Beverage.find({})
+  .then(beverages => {
   Checkin.findById(req.params.id)
   .then(checkin => {
-    res.render('/checkins/:id/edit'), {
+    res.render('checkins/edit', {
       title: 'Edit Check-In',
-      checkin
-    }
+      checkin,
+      beverages,
+    })
+  })
+})
+  .catch(err => {
+    console.log(err)
+    res.redirect("/tacos")
   })
 }
 

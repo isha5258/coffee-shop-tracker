@@ -9,6 +9,7 @@
         type="text" 
         name="name" 
         id="coffee-shop-input"
+        value="<%= checkin.name %> "
       >
     <label for="rating-input">Rating:</label>
       <input 
@@ -17,21 +18,22 @@
         type="number" 
         min="1" 
         max="5"
+        value="<%= checkin.rating %>"
       >
     <label for="location-input">Location(City only):</label>
       <input 
         id="location-input" 
         type="text" 
         name="location" 
-        value="Ex. Denver"
+        value="<%= checkin.location %>"
       >
       <label for="beverage-input">Drink:</label>
     <select 
     name="beverage" 
     id="beverage-input"
     >
-      <% beverage.forEach(beverages => { %>
-        <option value="<%= beverage._id %>"><%= beverages.name %></option>
+      <% beverages.forEach(beverage => { %>
+        <option value="<%= beverage._id %>"><%= beverage.name %></option>
       <% }) %>
     </select>
     <label for="parking-checkbox">Is there convenient parking?</label>
@@ -39,12 +41,14 @@
         type="checkbox"
         name="parking"
         id="parking-checkbox"
+        value="<%= checkin.parking ? 'checked' : '' %>"
       >
     <label for="comment-input">Comments:</label>
       <input 
         type="text" 
         name="comment" 
         id="comment-input"
+        value="<%= checkin.comment %> "
       >
     <button type="submit">Add Checkin</button>
   </form>
