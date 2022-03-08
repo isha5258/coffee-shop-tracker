@@ -75,22 +75,10 @@ function update(req, res) {
   })
 }
 
+function deleteCheckin(req, res) {
+  console.log('delete sanity')
+}
 
-// console.log(req.body)
-//   Checkin.findById(req.params.id)
-//   .populate('beverage')
-//   .then(checkin => {
-//     req.body.parking = !!req.body.parking
-//     checkin.updateOne(req.body, {new: true})
-//     .then(() => {
-//       res.redirect('/checkins')
-//     })
-//   })
-//   .catch(err => {
-//     console.log("the error:", err)
-//     res.redirect("/checkins")
-//   })
-// }
 
 export {
   index,
@@ -98,4 +86,5 @@ export {
   create,
   edit,
   update,
+  deleteCheckin as delete
 }
