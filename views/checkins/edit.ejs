@@ -39,9 +39,8 @@
     <label for="edit-parking-checkbox">Is there convenient parking?</label>
       <input 
         type="checkbox"
-        name="parking"
+        name="parking" <%= checkin.parking ? 'checked' : '' %>
         id="edit-parking-checkbox"
-        value="<%= checkin.parking ? 'checked' : '' %>"
       >
     <label for="edit-comment-input">Comments:</label>
       <input 
