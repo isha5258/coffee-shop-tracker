@@ -9,6 +9,12 @@ body > main {
   margin: 50px;
 }
 
+.checkin-container {
+  gap: 10rem;
+}
+img {
+  max-width: 18rem;
+} 
 .checkin-section {
   background-color: #e8eceb;
   padding: 15px;

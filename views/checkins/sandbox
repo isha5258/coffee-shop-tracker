@@ -33,13 +33,6 @@
                   <%= checkin.parking ? 'Has convenient parking' : 'Does not have convenient parking' %>
                 </li>
               </ul>
-              <% if (checkin.owner.equals(user?.profile._id)) { %> 
-                <form action="/checkins/<%= checkin._id %>/edit" method="GET">
-                  <button class="card-button" type="submit">Edit</button>
-                </form>
-                <form action="/checkins/<%= checkin._id %>?_method=DELETE" method="POST">
-                  <button class="card-button" type="submit">Delete</button>
-                <% } %>
             </div>
             <% } %>
         </div>
@@ -51,4 +44,11 @@
 
 <%- include('../partials/footer') %>
 
-<%- include('../partials/footer') %>
+
+<% if (checkin.owner.equals(user?.profile._id)) { %> 
+  <form action="/checkins/<%= checkin._id %>/edit" method="GET">
+    <button class="card-button" type="submit">Edit</button>
+  </form>
+  <form action="/checkins/<%= checkin._id %>?_method=DELETE" method="POST">
+    <button class="card-button" type="submit">Delete</button>
+  <% } %>
