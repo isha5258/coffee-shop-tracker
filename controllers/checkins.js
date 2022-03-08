@@ -76,7 +76,10 @@ function update(req, res) {
 }
 
 function deleteCheckin(req, res) {
-  console.log('delete sanity')
+  Checkin.findByIdAndDelete(req.params.id)
+  .then(checkin => {
+    res.redirect('/checkins')
+  })
 }
 
 
