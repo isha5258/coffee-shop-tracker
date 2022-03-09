@@ -6,15 +6,14 @@
 
 <main>
   <h1 class="checkin-title"> User Check-Ins</h1>
-  <h1 class="checkin-title"> User Check-Ins</h1>
 <div class="container py-5 px-3">
-  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g1 px-4">
     <% checkins.forEach(checkin=> { %>
       <div class="col">
         <div class="card">
           <% if (checkin.owner.avatar) { %>
             <img src="<%= checkin.owner.avatar %>" class="card-img-top" alt="<%= checkin.owner.name %> avatar" >
-            <div class="card-body">
+            <div class="card-body card mb-4 shadow-lg">
               <h5 class="card-title">
                 <%= checkin.owner.name %>
               </h5>

@@ -8,13 +8,25 @@ body > main {
   min-height: 100%;
   margin: 50px;
 }
+.card{
+  max-width: 16rem;
+  align-items: center;
+}
+.card-body {
+  align-items: flex-start;
+  min-width: 16rem;
+}
 
+.card-button {
+  margin: .2rem;
+}
 .checkin-container {
   gap: 10rem;
 }
-img {
-  max-width: 18rem;
+.card-img-top {
+  max-width: 50%;
 } 
+
 .checkin-section {
   background-color: #e8eceb;
   padding: 15px;

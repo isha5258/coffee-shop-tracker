@@ -80,6 +80,10 @@ function deleteCheckin(req, res) {
   .then(checkin => {
     res.redirect('/checkins')
   })
+  .catch(err => {
+    console.log("the error:", err)
+    res.redirect("/tacos")
+  })
 }
 
 
