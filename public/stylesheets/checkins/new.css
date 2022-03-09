@@ -1,0 +1,27 @@
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items:stretch;
+  background-color: rgb(145, 85, 47);
+  padding: 20px;
+  min-height: 100%;
+  margin: 50px;
+}
+
+h2 {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.list-group{
+  display: grid;
+  justify-content: center;
+  justify-items: start;
+  /* align-items: flex-start; */
+}
+.list-group-item {
+  padding: .2rem;
+  margin-top: 1rem;
+  
+}
