@@ -15,23 +15,26 @@
           <% if (checkin.owner.avatar) { %>
             <img src="<%= checkin.owner.avatar %>" class="card-img-top" alt="<%= checkin.owner.name %> avatar" >
             <% } %>
-            <div class="card-body card mb-4 shadow-lg">
+            <div class="card-owner-name card-body card mb-4 shadow-lg">
               <h5 class="card-title">
                 <%= checkin.owner.name %>
               </h5>
               <ul class="list-group list-group-flush">
-                <li class="card-text" id="checkin-name">Coffee Shop: <%= checkin.name %>
+                <li class="card-text" id="checkin-name"><i class="fa-solid fa-shop"></i>: <%= checkin.name %>
                 </li>
-                <li class="card-text" id="checkin-rating">Rating: <%= checkin.rating %>
+                <li class="card-text" id="checkin-rating"><i class="fa-solid fa-star-half-stroke"></i>: <%= checkin.rating %>
                 </li>
-                <li class="card-text" id="checkin-beverage">Drink: <%= checkin.beverage.name %>
+                <li class="card-text" id="checkin-beverage"><i class="fa-solid fa-mug-hot"></i>: <%= checkin.beverage.name %>
                 </li>
-                <li class="card-text" id="checkin-location">Location: <%= checkin.location %>
+                <li class="card-text" id="checkin-location"><i class="fa-solid fa-location-dot"></i>: <%= checkin.location %>
                 </li>
-                <li class="card-text" id="checkin-comment">Comments: <%= checkin.comment %>
+                <li class="card-text checkin-comment" id="checkin-comment"><i class="fa-solid fa-comment"></i>: <%= checkin.comment %>
                 </li>
                 <li class="card-text" id="checkin-parking">
-                  <%= checkin.parking ? 'Has convenient parking' : 'Does not have convenient parking' %>
+                  <i class='fa-solid fa-square-parking'
+                  >
+                  </i>: <%= checkin.parking ? 'Has convenient parking' : 'Does not have convenient parking' %>
+                  
                 </li>
               </ul>
               <% if (checkin.owner.equals(user?.profile._id)) { %> 
