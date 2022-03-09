@@ -4,13 +4,14 @@
 </head>
 <body>
   <nav>
+    <a href="/">
+      <button type="submit"> Return Home</button>
+    </a>
     <a href="/checkins">
       <button type="submit">See all Check-Ins</button>
     </a>
+    
     <% if (user) { %>
-      <a class="profile-btn" href="/checkins/:id">
-        <button type="submit">Your Profile</button>
-      </a>
       <a class="new-checkin-btn" href="/checkins/new">
         <button type="submit" class="beverage-link">Add Check-In</button>
       </a>
