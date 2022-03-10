@@ -80,3 +80,13 @@ h1 {
   font-size: 3.6rem;
   margin: 1.9rem auto .2rem;
 }
+
+@media only screen and (max-width: 760px) {
+  nav > a {
+    margin: .1rem;
+    padding: .1rem;
+  }
+  body {
+    background-size: contain;
+  }
+}

@@ -12,7 +12,10 @@ body {
 }
 
 .inside-container{
+  display: flex;
+  gap: 1.6rem;
   justify-content: center;
+  margin: 2.4rem;
 }
 
 .card{
@@ -45,6 +48,7 @@ body {
   margin: .2rem;
   box-shadow: .5px 1px 0px black;
   padding: 0 .4rem 0 .1rem;
+  border-radius: 5px;
 }
 .col{
   margin: 1.6rem;
@@ -52,7 +56,7 @@ body {
 
 .card-button {
   margin: .2rem;
-  border-radius: 5px;
+  
 }
 
 .card-button:hover {
