@@ -7,6 +7,9 @@
   border-radius: 15px;
   opacity: 100%;
   padding: 0;
+  border-radius: 5px;
+  border: 0;
+  
 }
 
 .siwg-link {
@@ -45,4 +48,5 @@
   position: absolute;
   width: 1px;
   border-radius: 50%;
+  border-radius: 5px;
 }

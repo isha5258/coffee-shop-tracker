@@ -8,21 +8,21 @@
   <nav>
     <i class="fa-solid fa-mug-hot"></i>
     <a href="/">
-      <button type="submit"> Return Home</button>
+      <button class="nav-button" type="submit"> Return Home</button>
     </a>
     <a href="/checkins">
-      <button type="submit">See all Check-Ins</button>
+      <button class="nav-button" type="submit">See all Check-Ins</button>
     </a>
     
     <% if (user) { %>
       <a class="new-checkin-btn" href="/checkins/new">
-        <button type="submit" class="beverage-link">Add Check-In</button>
+        <button type="submit" class="nav-button">Add Check-In</button>
       </a>
       <a href="/beverages">
-        <button type="submit">Add Beverage</button>
+        <button class="nav-button" type="submit">Add Beverage</button>
       </a>
       <a href="/auth/logout" class="logout-link">
-        <button type="submit">Logout</button>
+        <button class="nav-button" type="submit">Logout</button>
       </a>
     <% } else { %>
       <a href="/auth/google" class="siwg-link">
