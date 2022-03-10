@@ -7,14 +7,21 @@ body {
   background-image: url('/assets/coffee-bg.jpg');
   height: 100%;
   background-size: cover;
+  
+  
 }
 
+.inside-container{
+  justify-content: center;
+}
 
 .card{
-  max-width: 16rem;
+  width: 16rem;
   align-items: center;
   border: 1px;
   background-color: #D3D3D3;
+  
+  
 }
 
 .card-body {
@@ -24,24 +31,41 @@ body {
   padding: 0 .2rem;
   list-style: none;
 }
+.card-title{
+  font-size: 1.6rem;
+  
+}
 .card-text {
   list-style: none;
   background-color: #D3D3D3;
-  margin: .1rem;
+  margin: .05rem;
   
 }
+.col{
+  margin: 1.6rem;
+}
+
 .card-button {
   margin: .2rem;
 }
-.checkin-container {
+
+.container {
   gap: 10rem;
+  
 }
+
 .card-img-top {
   max-width: 50%;
   padding: .2rem;
+  border-radius: 50%;
 } 
 
 h1 {
+  background-color: #667d83;
+  color: #D3D3D3;
   font-size: 3.6rem;
   margin: 1.9rem auto .2rem;
+  text-shadow: 1px 2px 0px black;
+  padding: .5rem;
+  border-radius: 10px;
 }
