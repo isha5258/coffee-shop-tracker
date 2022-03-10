@@ -28,11 +28,6 @@ body {
     "nav"
     "main";
   font-size: 1rem;
-  background-image: url('/assets/coffee-bg.jpg');
-  height: 100%;
-  background-size:contain;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 body > main {
@@ -41,9 +36,13 @@ body > main {
   background-color: #b8bbc0;
   height: 100%;
   margin: 4rem 2rem;
-  opacity: 50%;
+  justify-content: center;
+  justify-items: center;
+  min-height: 300px;
 }
-
+p {;
+  max-width: 500px;
+}
 body > nav {
   grid-area: nav;
   background-color: #667d83;
