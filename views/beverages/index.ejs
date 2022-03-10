@@ -1,20 +1,22 @@
 <%- include('../partials/html-head') %>
-
+<link rel="stylesheet" href="/stylesheets/beverages/beverage.css">
 <%- include('../partials/nav') %>
 
-<main>
-  <h1> Beverages </h1>
+<main class="beverage-main">
+  <h1 class="beverage-title">Add New Beverages</h1>
   <% if (user) { %>
-    <form id="add-beverage-form" action="/beverages" method="POST">
+    <form class="beverage-form" id="add-beverage-form" action="/beverages" method="POST">
       <label for="name-input">Drink:</label>
-      <input type="text" name="name" id="name-input" required>
-      <button type="submit">Add Drink</button>
+      <input class="beverage-input" type="text" name="name" id="name-input" required placeholder="Add New Drink">
+      <button class="beverage-button" type="submit">Add Drink</button>
     </form>
+    <h6>*Please only add drinks that are not on the list. Thank You!</h6>
   <% } %>
-  <div id="beverage-list">
-    <ul>
+  <h3 class="beverage-h3-list">Beverage List:</h3>
+  <div class="beverage-container" id="beverage-list">
+    <ul class="beverage-list">
       <% beverage.forEach(beverages => { %>
-        <li class="beverage-list"> <%= beverages.name %>  </li>
+        <li class="beverages"> <%= beverages.name %>  </li>
       <% }) %>
     </ul>
   </div>
