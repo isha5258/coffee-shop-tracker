@@ -38,7 +38,7 @@ body {
 body > main {
   grid-area: main;
   display: grid;
-  background-color: #b8bbc0;
+  background-color: #b8bbc0; 
   height: 100%;
   margin: 4rem 2rem;
   justify-content: center;

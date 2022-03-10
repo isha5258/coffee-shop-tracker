@@ -3,26 +3,39 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items:stretch;
-  background-color: rgb(145, 85, 47);
-  padding: 20px;
-  min-height: 100%;
+  background-color: #b8bbc0;
   
-  ;
+  min-height: 100%;
+  margin: 1.6rem;
+  padding: .5rem;
 }
 
 h2 {
   display: grid;
   justify-content: center;
   margin-bottom: 3rem;
+  padding: 1.6rem;
+  background-color: #667d83;
+  color: #b8bbc0;
+  text-shadow: 1px 2px 0px black;
+  font-size: 2.4rem;
+  border-radius: 10px;
+  box-shadow: 1px 2px 0px black;
 }
 .list-group{
   display: grid;
   justify-content: center;
   justify-items: start;
+  background-color: #667d83;
+  border: 5px  double #667d83;
+  border-radius: 10px;
+  box-shadow: 1px 2px 0px black;
   /* align-items: flex-start; */
 }
 .list-group-item {
   padding: .2rem;
   margin-top: 1rem;
+  background-color: #D3D3D3;
+  border-radius: 5px;
   
 }

@@ -19,9 +19,9 @@ body {
   width: 16rem;
   align-items: center;
   border: 1px;
-  background-color: #D3D3D3;
-  
-  
+  background-color: #b8bbc0;
+  border-radius: 10px;
+  box-shadow: .5px 1px 0px black;
 }
 
 .card-body {
@@ -30,16 +30,21 @@ body {
   background-color:#667d83;
   padding: 0 .2rem;
   list-style: none;
+  border-radius: 5px;
+  
 }
+
 .card-title{
   font-size: 1.6rem;
+  border-radius: 5px;
   
 }
 .card-text {
   list-style: none;
   background-color: #D3D3D3;
-  margin: .05rem;
-  
+  margin: .2rem;
+  box-shadow: .5px 1px 0px black;
+  padding: 0 .4rem 0 .1rem;
 }
 .col{
   margin: 1.6rem;
@@ -47,8 +52,12 @@ body {
 
 .card-button {
   margin: .2rem;
+  border-radius: 5px;
 }
 
+.card-button:hover {
+  background-color: #b8bbc0;
+}
 .container {
   gap: 10rem;
   
