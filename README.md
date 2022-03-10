@@ -1,4 +1,4 @@
-# Coffee Shop Tracker app
+# Coffee Shop Tracker
 
 ## Track Your Own Coffee Shops
 <br>
@@ -13,24 +13,22 @@
 ## Motivation
 <br>
 
-While living in Denver, Colorado, I have not had a short supply of coffee shops to visit. However, there have been numerous times that I forget about a particular coffee shop in the mountains that I loved or did not like, and this is why the idea for the Coffee Shop tracking app came about. I wanted to create an app that allowed people to track coffee shops and rate them. With this app, users can view their own and other user check-ins to see which coffee shops they should visit or avoid.
+While living in Denver, Colorado, I have not had a short supply of coffee shops to visit. However, there have been numerous times that I forget about a particular coffee shop in the mountains that I loved or did not like, and this is why the idea for the Coffee Shop Tracker came about. I wanted to create an app that allowed people to track coffee shops and rate them. With this app, users can view their own and other user check-ins to see which coffee shops they should visit or avoid.
 <br>
 <br>
 
 ---
 ---
-## Trello
+## Trello Planning
+<br>
 
+#### Click [here](https://trello.com/b/hmEk4yLH/coffee-tracker) to view trello planning board.
+<br>
 
 ---
 ---
 
 ## Screenshots
-
-### Wireframe:
-![](public/assets/wireframe/wireframe1.png)
-![](public/assets/wireframe/wireframe2.png)
-<br>
 
 ### Home Page:
 ![](public/assets/screenshots/home-page.png)
@@ -40,8 +38,8 @@ While living in Denver, Colorado, I have not had a short supply of coffee shops 
 ![](public/assets/screenshots/checkin-page.png)
 <br>
 
-### Add Check-in Page:
-![]()
+### Add New Check-in Page:
+![](public/assets/screenshots/new-checkin-page.png)
 <br>
 
 ### Add Beverage Page
@@ -72,6 +70,8 @@ While living in Denver, Colorado, I have not had a short supply of coffee shops 
 -Font Awesome - Icons - https://fontawesome.com/
 
 -Whimsical - Wireframe - https://whimsical.com/
+
+-Trello - planning board - https://trello.com/
 <br>
 
 ---
