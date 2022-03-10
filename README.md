@@ -32,8 +32,8 @@ While living in Denver, Colorado, I have not had a short supply of coffee shops 
 ![](public/assets/screenshots/home-page.png)
 <br>
 
-### Check-in Page:
-![](public/assets/screenshots/checkin-page.png)
+### All Check-ins Page:
+![](public/assets/screenshots/checkins-page.png)
 <br>
 
 ### Add New Check-in Page:
@@ -41,7 +41,7 @@ While living in Denver, Colorado, I have not had a short supply of coffee shops 
 <br>
 
 ### Add Beverage Page
-![](public/assets/screenshots/new-checkin-page.png)
+![](public/assets/screenshots/add-beverage-page.png)
 <br>
 
 ---

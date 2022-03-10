@@ -89,6 +89,21 @@ nav > a {
   box-shadow: .5px 1px .5px black, .5px 1px .5px black;
 }
 
+.return-home {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+  font-size: 2rem;
+  color: #efefef;
+  text-shadow: .5px 1px .5px black;
+}
+
+.return-home:hover {
+  color: #b8bbc0;
+}
+
+
+
 button:hover{
   background-color: #b8bbc0;
 }
