@@ -7,54 +7,53 @@
 
   <h1 class="checkin-title"> User Check-Ins</h1>
   <% if (checkins.length) { %> 
-<div class="container py-5 px-3">
-  <div class="inside-container row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g1 px-4">
-    <% checkins.forEach(checkin=> { %>
-      <div class="col">
-        <div class="card">
-          <% if (checkin.owner.avatar) { %>
-            <img src="<%= checkin.owner.avatar %>" class="card-img-top" alt="<%= checkin.owner.name %> avatar" >
-            <% } %>
-            <div class="card-owner-name card-body card mb-4 shadow-lg">
-              <h5 class="card-title">
-                <%= checkin.owner.name %>
-              </h5>
-              <ul class="list-group list-group-flush">
-                <li class="card-text" id="checkin-name"><i class="fa-solid fa-shop"></i>: <%= checkin.name %>
-                </li>
-                <li class="card-text" id="checkin-rating"><i class="fa-solid fa-star-half-stroke"></i>: <%= checkin.rating %>
-                </li>
-                <li class="card-text" id="checkin-beverage"><i class="fa-solid fa-mug-hot"></i>: <%= checkin.beverage.name %>
-                </li>
-                <li class="card-text" id="checkin-location"><i class="fa-solid fa-location-dot"></i>: <%= checkin.location %>
-                </li>
-                <li class="card-text checkin-comment" id="checkin-comment"><i class="fa-solid fa-comment"></i>: <%= checkin.comment %>
-                </li>
-                <li class="card-text" id="checkin-parking">
-                  <i class='fa-solid fa-square-parking'
-                  >
-                  </i>: <%= checkin.parking ? 'Has convenient parking' : 'No convenient parking' %>
-                  
-                </li>
-              </ul>
-              <% if (checkin.owner.equals(user?.profile._id)) { %> 
-                <form action="/checkins/<%= checkin._id %>/edit" method="GET">
-                  <button class="card-button" type="submit">Edit</button>
-                </form>
-                <form action="/checkins/<%= checkin._id %>?_method=DELETE" method="POST">
-                  <button class="card-button" type="submit">Delete</button>
+    <div class="container py-5 px-3">
+      <div class="inside-container row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g1 px-4">
+        <% checkins.forEach(checkin=> { %>
+          <div class="col">
+            <div class="card">
+              <% if (checkin.owner.avatar) { %>
+                <img src="<%= checkin.owner.avatar %>" class="card-img-top" alt="<%= checkin.owner.name %> avatar" >
+              <% } %>
+              <div class="card-owner-name card-body card mb-4 shadow-lg">
+                <h5 class="card-title">
+                  <%= checkin.owner.name %>
+                </h5>
+                <ul class="list-group list-group-flush">
+                  <li class="card-text" id="checkin-name"><i class="fa-solid fa-shop"></i>: <%= checkin.name %>
+                  </li>
+                  <li class="card-text" id="checkin-rating"><i class="fa-solid fa-star-half-stroke"></i>: <%= checkin.rating %>
+                  </li>
+                  <li class="card-text" id="checkin-beverage"><i class="fa-solid fa-mug-hot"></i>: <%= checkin.beverage.name %>
+                  </li>
+                  <li class="card-text" id="checkin-location"><i class="fa-solid fa-location-dot"></i>: <%= checkin.location %>
+                  </li>
+                  <li class="card-text checkin-comment" id="checkin-comment"><i class="fa-solid fa-comment"></i>: <%= checkin.comment %>
+                  </li>
+                  <li class="card-text" id="checkin-parking">
+                    <i class='fa-solid fa-square-parking'
+                    >
+                    </i>: <%= checkin.parking ? 'Has convenient parking' : 'No convenient parking' %>
+                    
+                  </li>
+                </ul>
+                <% if (checkin.owner.equals(user?.profile._id)) { %> 
+                  <form action="/checkins/<%= checkin._id %>/edit" method="GET">
+                    <button class="card-button" type="submit">Edit</button>
+                  </form>
+                  <form action="/checkins/<%= checkin._id %>?_method=DELETE" method="POST">
+                    <button class="card-button" type="submit">Delete</button>
                   </form>
                 <% } %>
+              </div>
             </div>
-            
-        </div>
+          </div>
+        <% }) %>
       </div>
-      <% }) %>
-  </div>
-</div>
-<% } else { %>
-  <h2>There are no check-ins yet</h2>
-<% } %> 
+    </div>
+  <% } else { %>
+    <h2>There are no check-ins yet</h2>
+  <% } %> 
 
 <%- include('../partials/footer') %>
 

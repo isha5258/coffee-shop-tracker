@@ -2,93 +2,93 @@
 <link rel="stylesheet" href="/stylesheets/checkins/new.css">
 <%- include('../partials/nav') %>
 
-<main>
-  <h2>Check-in a New Coffee Shop</h2>
-  <form id="new-form" action="/checkins" method="POST">
-    <ul class="list-group" style="padding: 0px;">
-    <% if(user) { %> 
-      <li class="list-group-item">
-        
-          <label for="coffee-shop-input">Coffee Shop Name:</label>
+  <main>
+    <h2>Check-in a New Coffee Shop</h2>
+    <form id="new-form" action="/checkins" method="POST">
+      <ul class="list-group" style="padding: 0px;">
+      <% if(user) { %> 
+        <li class="list-group-item">
+          
+            <label for="coffee-shop-input">Coffee Shop Name:</label>
+            <input 
+              class="input"
+              type="text" 
+              name="name" 
+              id="coffee-shop-input"
+              required
+            >
+        </li>
+        <br>
+        <li class="list-group-item">
+        <label for="rating-input">Rating:</label>
+          <input 
+            class="input"
+            id="rating-input" 
+            name="rating" 
+            type="number" 
+            value="5"
+            min="1" 
+            max="5"
+          >
+        </li>
+        <br>
+        <li class="list-group-item">
+        <label for="location-input">Location(City only):</label>
+          <input 
+            class="input"
+            id="location-input" 
+            type="text" 
+            name="location" 
+            placeholder="Ex. Denver"
+            required
+          >
+        </li>
+        <br>
+        <li class="list-group-item">
+          <label for="beverage-input">Drink:</label>
+            <select
+              class="input" 
+              name="beverage" 
+              id="beverage-input"
+            >
+        </li>
+        <br>
+        <li class="list-group-item">
+          <% beverages.forEach(beverage => { %>
+            <option value="<%= beverage._id %>"><%= beverage.name %></option>
+          <% }) %>
+        </select>
+        </li>
+        <br>
+        <li class="list-group-item">
+        <label for="parking-checkbox">Is there convenient parking?</label>
+          <input 
+            class="input"
+            type="checkbox"
+            name="parking"
+            id="parking-checkbox"
+          >
+        </li>
+        <br>
+        <li class="list-group-item">
+        <label for="comment-input">Comments:</label>
           <input 
             class="input"
             type="text" 
-            name="name" 
-            id="coffee-shop-input"
-            required
+            name="comment" 
+            id="comment-input"
+            maxlength="55"
+            placeholder="Max 55 Characters"
           >
-      </li>
-      <br>
-      <li class="list-group-item">
-      <label for="rating-input">Rating:</label>
-        <input 
-          class="input"
-          id="rating-input" 
-          name="rating" 
-          type="number" 
-          value="5"
-          min="1" 
-          max="5"
-        >
-      </li>
-      <br>
-      <li class="list-group-item">
-      <label for="location-input">Location(City only):</label>
-        <input 
-          class="input"
-          id="location-input" 
-          type="text" 
-          name="location" 
-          placeholder="Ex. Denver"
-          required
-        >
-      </li>
-      <br>
-      <li class="list-group-item">
-        <label for="beverage-input">Drink:</label>
-          <select
-            class="input" 
-            name="beverage" 
-            id="beverage-input"
-          >
-      </li>
-      <br>
-      <li class="list-group-item">
-        <% beverages.forEach(beverage => { %>
-          <option value="<%= beverage._id %>"><%= beverage.name %></option>
-        <% }) %>
-      </select>
-      </li>
-      <br>
-      <li class="list-group-item">
-      <label for="parking-checkbox">Is there convenient parking?</label>
-        <input 
-          class="input"
-          type="checkbox"
-          name="parking"
-          id="parking-checkbox"
-        >
-      </li>
+        </li>
         <br>
-        <li class="list-group-item">
-      <label for="comment-input">Comments:</label>
-        <input 
-          class="input"
-          type="text" 
-          name="comment" 
-          id="comment-input"
-          maxlength="55"
-          placeholder="Max 55 Characters"
-        >
-      </li>
-        <br>
-      <button class="card-button" type="submit">Add Checkin</button>
-    </ul>
-  </form>
-  <% } %>
-  
+        <button class="card-button" type="submit">Add Checkin</button>
+      </ul>
+    </form>
+      <% } %>
+    
 
-</main>
+  </main>
 
 
 <%- include('../partials/footer') %>

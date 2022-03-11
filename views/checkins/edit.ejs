@@ -1,58 +1,58 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/style.css">
 <%- include('../partials/nav') %>
-<main>
-  <% if(user) { %> 
-  <form action="/checkins/<%= checkin._id %>?_method=PUT" method="POST">
-    <label for="edit-shop-input">Coffee Shop Name:</label>
-      <input 
-        type="text" 
-        name="name" 
-        id="edit-shop-input"
-        value="<%= checkin.name %> "
+  <main>
+    <% if(user) { %> 
+    <form action="/checkins/<%= checkin._id %>?_method=PUT" method="POST">
+      <label for="edit-shop-input">Coffee Shop Name:</label>
+        <input 
+          type="text" 
+          name="name" 
+          id="edit-shop-input"
+          value="<%= checkin.name %> "
+        >
+      <label for="edit-rating-input">Rating:</label>
+        <input 
+          id="edit-rating-input" 
+          name="rating" 
+          type="number" 
+          min="1" 
+          max="5"
+          value="<%= checkin.rating %>"
+        >
+      <label for="edit-location-input">Location(City only):</label>
+        <input 
+          id="edit-location-input" 
+          type="text" 
+          name="location" 
+          value="<%= checkin.location %>"
+        >
+        <label for="edit-beverage-input">Drink:</label>
+      <select 
+        name="beverage" 
+        id="beverage-input"
       >
-    <label for="edit-rating-input">Rating:</label>
-      <input 
-        id="edit-rating-input" 
-        name="rating" 
-        type="number" 
-        min="1" 
-        max="5"
-        value="<%= checkin.rating %>"
-      >
-    <label for="edit-location-input">Location(City only):</label>
-      <input 
-        id="edit-location-input" 
-        type="text" 
-        name="location" 
-        value="<%= checkin.location %>"
-      >
-      <label for="edit-beverage-input">Drink:</label>
-    <select 
-    name="beverage" 
-    id="beverage-input"
-    >
-      <% beverages.forEach(beverage => { %>
-        <option value="<%= beverage._id %>"><%= beverage.name %></option>
-      <% }) %>
-    </select>
-    <label for="edit-parking-checkbox">Is there convenient parking?</label>
-      <input 
-        type="checkbox"
-        name="parking" <%= checkin.parking ? 'checked' : '' %>
-        id="edit-parking-checkbox"
-      >
-    <label for="edit-comment-input">Comments:</label>
-      <input 
-        type="text" 
-        name="comment" 
-        id="edit-comment-input"
-        value="<%= checkin.comment %> "
-      >
-    <button type="submit">Add Checkin</button>
-  </form>
-  <% } %>
-</main>
+        <% beverages.forEach(beverage => { %>
+          <option value="<%= beverage._id %>"><%= beverage.name %></option>
+        <% }) %>
+      </select>
+      <label for="edit-parking-checkbox">Is there convenient parking?</label>
+        <input 
+          type="checkbox" 
+          name="parking" <%= checkin.parking ? 'checked' : '' %>
+          id="edit-parking-checkbox"
+        >
+      <label for="edit-comment-input">Comments:</label>
+        <input 
+          type="text" 
+          name="comment" 
+          id="edit-comment-input"
+          value="<%= checkin.comment %> "
+        >
+      <button type="submit">Add Checkin</button>
+    </form>
+    <% } %>
+  </main>
 
 
 <%- include('../partials/footer') %>
