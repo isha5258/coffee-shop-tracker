@@ -35,7 +35,6 @@ function create(req, res) {
   req.body.owner = req.user.profile._id
   req.body.parking = !!req.body.parking
   Checkin.create(req.body)
-  // .populate('beverage')
   .then(checkin => {
   res.redirect('/checkins')
   })
