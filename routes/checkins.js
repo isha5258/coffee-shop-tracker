@@ -17,6 +17,7 @@ router.post('/', isLoggedIn, checkinsCtrl.create)
 router.put('/:id', isLoggedIn, checkinsCtrl.update)
 // Delete - localhost:3000/checkins/:id
 router.delete('/:id', isLoggedIn, checkinsCtrl.delete)
+
 export {
   router
 }
