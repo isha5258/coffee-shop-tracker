@@ -112,7 +112,6 @@ button:hover{
   background-color: #b8bbc0;
 }
 
-
 .welcome-msg {
   font-size: Clamp(2vw, 3.5rem, 4vw);
   margin: 1.9rem auto 3rem;
@@ -130,6 +129,3 @@ button:hover{
   }
 }
 
-@media only screen and (max-width: 760px) {
-
-}
