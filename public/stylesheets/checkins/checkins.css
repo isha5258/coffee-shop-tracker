@@ -56,27 +56,30 @@ body {
   align-items: flex-start;
   min-width: 16rem;
   background-color:#667d83;
-  padding: 0 .2rem;
   list-style: none;
   border-radius: 5px;
   list-style: none;
+  padding: 0;
 }
+
 .list-group {
   list-style: none;
 }
+
 .card-title{
   font-size: 1.6rem;
   border-radius: 5px;
   list-style: none;
 }
+
 .card-text {
-  width: 14rem;
+  width: 159px;
   list-style: none;
   background-color: #D3D3D3;
-  margin: .2rem;
-  box-shadow: .5px 1px .5px black;
-  padding: 0 .4rem 0 .1rem;
-  border-radius: 5px;
+  /* margin: .2rem; */
+  /* box-shadow: .5px 1px .5px black; */
+  
+  /* border-radius: 5px; */
 }
 .col{
   margin: 1.6rem;
