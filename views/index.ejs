@@ -3,15 +3,7 @@
 <%- include('./partials/nav') %>
 
   <main>
-    <h1>Welcome, <%= user ? user.profile.name : "Coffee Lover!" %></h1>
-    <% if (user?.profile.avatar) { %>
-      <div>
-        <img
-          src="<%= user.profile.avatar %>"
-          alt="<%= user.profile.name %> avatar"
-        />
-      </div>
-    <% } %>
+    <h1 class="welcome-msg">Welcome, <%= user ? user.profile.name : "Coffee Lover!" %></h1>
     <p class="app-inro">Coffee Shop Tracker lets anyone, from the coffee enthusiast to someone who is just discovering this magical elixir, keep track of which shops and beverages they like the most. Enjoy adding coffee shops and keeping track of places you'd love or never visit again. Loggin to add a Shop!</p>
     <br> 
     <% if (!user) { %>
