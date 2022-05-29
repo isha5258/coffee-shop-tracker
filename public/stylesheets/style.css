@@ -65,10 +65,14 @@ body > nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: clamp(50vw, 65vw, 80vw);
+  font-size: clamp(.5rem, 1rem, 2rem);
+  max-width: 80vw
+  height: 4rem;
   padding: 0 10px 0 10px;
   border-radius: 5px;
   box-shadow: .5px 1px .5px black, .2px .2px 10px .75px black;
+  position: fixed;
+  z-index: 99;
 }
 
 nav > i {
@@ -85,12 +89,18 @@ nav > a {
   text-decoration: none;
   border-radius: 5px;
   color: #424748;
+  width: fit-content;
 }
 .nav-button {
   border-radius: 5px;
   border: 0;
   margin: 0 1rem 0 0;
   box-shadow: .5px 1px .5px black, .5px 1px .5px black;
+  width: fit-content;
+}
+
+.logout-icon {
+  visibility: hidden;
 }
 
 .return-home {
@@ -123,9 +133,18 @@ button:hover{
     margin: .1rem;
     padding: .1rem;
   }
+
   body {
     background-size: cover;
     background-position: center;
   }
 }
 
+@media only screen and (max-width: 420px) {
+  .nav-button {
+    padding: 2px;
+    margin-right: 6px;
+  }
+
+
+}

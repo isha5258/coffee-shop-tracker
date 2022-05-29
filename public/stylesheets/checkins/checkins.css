@@ -11,6 +11,12 @@ body {
   
 }
 
+.main-container{
+  margin-top: 5rem;
+  display: grid;
+  justify-items: center;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -25,21 +31,27 @@ body {
   transition: ease all .5s;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1250px) {
   .inside-container {
     grid-template-columns: repeat(4, 1fr)
   }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 975px) {
   .inside-container {
     grid-template-columns: repeat(3, 1fr)
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .inside-container {
     grid-template-columns: repeat(2, 1fr)
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .inside-container {
+    grid-template-columns: repeat(1, 1fr)
   }
 }
 
@@ -125,7 +137,7 @@ body {
   margin: 1rem 0;
   border-radius: 50%;
   border: 0;
-  box-shadow: .15px .5px 1px 1px black;
+  box-shadow: .15px .5px 1px 1px black, .15px .5px 4px 1px black;;
 } 
 
 .checkin-title {
@@ -135,7 +147,7 @@ body {
   justify-content: center;
   font-size: 3.6rem;
   margin: 3rem 0 .2rem;
-  min-width: clamp(20rem, 40vw, 35rem);
+  width: clamp(20rem, 35vw, 40rem);
   text-shadow: 1px 2px 2px black, 1px 2px 2px black;
   padding: .75rem;
   border-radius: 10px;

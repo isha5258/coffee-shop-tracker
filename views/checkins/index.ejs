@@ -4,58 +4,59 @@
 
 <%- include('../partials/nav') %>
 
-
-  <h1 class="checkin-title"> Check-Ins</h1>
-  <% if (checkins.length) { %> 
-    <div class="container">
-      <div class="inside-container">
-        <% checkins.forEach(checkin=> { %>
-          <div class="col">
-            <div class="card">
-              <% if (checkin.owner.avatar) { %>
-                <img src="<%= checkin.owner.avatar %>" class="card-img-top" alt="<%= checkin.owner.name %> avatar" >
-              <% } %>
-              <div class="checkin-container">
-                <h5 class="card-title">
-                  <%= checkin.owner.name %>
-                </h5>
-                <ul class="checkin-group list-group-flush">
-                  <li class="checkin-text" id="checkin-name"><i class="fa-solid fa-shop"></i>: <%= checkin.name %>
-                  </li>
-                  <li class="checkin-text" id="checkin-rating"><i class="fa-solid fa-star-half-stroke"></i>: <%= checkin.rating %>
-                  </li>
-                  <li class="checkin-text" id="checkin-beverage"><i class="fa-solid fa-mug-hot"></i>: <%= checkin.beverage.name %>
-                  </li>
-                  <li class="checkin-text" id="checkin-location"><i class="fa-solid fa-location-dot"></i>: <%= checkin.location %>
-                  </li>
-                  <li class="checkin-text checkin-comment" id="checkin-comment"><i class="fa-solid fa-comment"></i>: <%= checkin.comment %>
-                  </li>
-                  <li class="checkin-text" id="checkin-parking">
-                    <i class='fa-solid fa-square-parking'
-                    >
-                    </i>: <%= checkin.parking ? 'Has convenient parking' : 'No convenient parking' %>
-                    
-                  </li>
-                </ul>
-                <% if (checkin.owner.equals(user?.profile._id)) { %> 
-                  <div class="button-container">
-                    <form action="/checkins/<%= checkin._id %>/edit" method="GET">
-                      <button class="card-button" type="submit">Edit</button>
-                    </form>
-                    <form action="/checkins/<%= checkin._id %>?_method=DELETE" method="POST">
-                      <button class="card-button" type="submit">Delete</button>
-                    </form>
-                  </div>
+  <div class="main-container">
+    <h1 class="checkin-title"> Check-Ins</h1>
+    <% if (checkins.length) { %> 
+      <div class="container">
+        <div class="inside-container">
+          <% checkins.forEach(checkin=> { %>
+            <div class="col">
+              <div class="card">
+                <% if (checkin.owner.avatar) { %>
+                  <img src="<%= checkin.owner.avatar %>" class="card-img-top" alt="<%= checkin.owner.name %> avatar" >
                 <% } %>
+                <div class="checkin-container">
+                  <h5 class="card-title">
+                    <%= checkin.owner.name %>
+                  </h5>
+                  <ul class="checkin-group list-group-flush">
+                    <li class="checkin-text" id="checkin-name"><i class="fa-solid fa-shop"></i>: <%= checkin.name %>
+                    </li>
+                    <li class="checkin-text" id="checkin-rating"><i class="fa-solid fa-star-half-stroke"></i>: <%= checkin.rating %>
+                    </li>
+                    <li class="checkin-text" id="checkin-beverage"><i class="fa-solid fa-mug-hot"></i>: <%= checkin.beverage.name %>
+                    </li>
+                    <li class="checkin-text" id="checkin-location"><i class="fa-solid fa-location-dot"></i>: <%= checkin.location %>
+                    </li>
+                    <li class="checkin-text checkin-comment" id="checkin-comment"><i class="fa-solid fa-comment"></i>: <%= checkin.comment %>
+                    </li>
+                    <li class="checkin-text" id="checkin-parking">
+                      <i class='fa-solid fa-square-parking'
+                      >
+                      </i>: <%= checkin.parking ? 'Has convenient parking' : 'No convenient parking' %>
+                      
+                    </li>
+                  </ul>
+                  <% if (checkin.owner.equals(user?.profile._id)) { %> 
+                    <div class="button-container">
+                      <form action="/checkins/<%= checkin._id %>/edit" method="GET">
+                        <button class="card-button" type="submit">Edit</button>
+                      </form>
+                      <form action="/checkins/<%= checkin._id %>?_method=DELETE" method="POST">
+                        <button class="card-button" type="submit">Delete</button>
+                      </form>
+                    </div>
+                  <% } %>
+                </div>
               </div>
             </div>
-          </div>
-        <% }) %>
+          <% }) %>
+        </div>
       </div>
-    </div>
-  <% } else { %>
-    <h2>There are no check-ins yet</h2>
-  <% } %> 
+    <% } else { %>
+      <h2>There are no check-ins yet</h2>
+    <% } %> 
+  </div>
 
 <%- include('../partials/footer') %>
 
