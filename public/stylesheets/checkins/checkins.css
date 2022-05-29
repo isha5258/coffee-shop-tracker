@@ -109,13 +109,16 @@ body {
   box-shadow: .15px .5px 1px 1px black;
 } 
 
-h1 {
+.checkin-title {
   background-color: #667d83;
   color: #D3D3D3;
+  display: flex;
+  justify-content: center;
   font-size: 3.6rem;
-  margin: 1.9rem auto .2rem;
+  margin: 3rem 0 .2rem;
+  min-width: clamp(20rem, 40vw, 35rem);
   text-shadow: 1px 2px 2px black, 1px 2px 2px black;
-  padding: .5rem;
+  padding: .75rem;
   border-radius: 10px;
   box-shadow: .5px .5px .5px black, .2px .2px 10px .75px black;
 }

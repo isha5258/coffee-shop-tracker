@@ -9,7 +9,7 @@ body > main {
   padding: .5rem;
 }
 
-h1 {
+.beverage-title {
   display: grid;
   justify-content: center;
   margin-bottom: 3rem;
