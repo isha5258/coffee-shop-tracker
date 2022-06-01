@@ -2,43 +2,45 @@
 <link rel="stylesheet" href="/stylesheets/beverages/beverage.css">
 <%- include('../partials/nav') %>
 
-  <main class="beverage-main">
+  <div class="new-beverage-container">
     <h1 class="beverage-title">Add New Beverages</h1>
-    <div class="form-list-container">
-      <% if (user) { %>
-        <form 
-          class="beverage-form" 
-          id="add-beverage-form" 
-          action="/beverages" 
-          method="POST"
-        >
-          <label for="name-input">Drink:</label>
-          <input 
-            class="beverage-input" 
-            type="text" 
-            name="name" 
-            id="name-input" 
-            required 
-            placeholder="Add Beverage Here"
+    <main class="beverage-main">
+      
+      <div class="form-list-container">
+        <% if (user) { %>
+          <form 
+            class="beverage-form" 
+            id="add-beverage-form" 
+            action="/beverages" 
+            method="POST"
           >
-          <button class="beverage-button" type="submit">Add Drink</button>
-        </form>
-        
-        <h6>*Please only add drinks that are not on the list. Thank You!</h6>
-      <% } %>
-    </div>
-    <h3 class="beverage-list-title"><i class="fa-solid fa-mug-hot icon"></i> List:</h3>
-    <div class="beverage-list-container">
-      <div class="beverage-container" id="beverage-list">
-        <ul class="beverage-list">
-          <% beverage.forEach(beverages => { %>
-            <li class="beverages">- <%= beverages.name %></li>
-          <% }) %>
-        </ul>
+            <label for="name-input">Drink:</label>
+            <input 
+              class="beverage-input" 
+              type="text" 
+              name="name" 
+              id="name-input" 
+              required 
+              placeholder="Add Beverage Here"
+            >
+            <button class="beverage-button" type="submit">Add Drink</button>
+          </form>
+          
+          <h6>*Please only add drinks that are not on the list. Thank You!</h6>
+        <% } %>
       </div>
-    </div>
-  </main>
-  
+      <h3 class="beverage-list-title"><i class="fa-solid fa-mug-hot icon"></i> List:</h3>
+      <div class="beverage-list-container">
+        <div class="beverage-container" id="beverage-list">
+          <ul class="beverage-list">
+            <% beverage.forEach(beverages => { %>
+              <li class="beverages">- <%= beverages.name %></li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
 
 
 <%- include('../partials/footer') %>
