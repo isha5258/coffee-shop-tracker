@@ -41,7 +41,7 @@ h2 {
   border-radius: 5px;
   box-shadow: 1px 2px 2px black;
 }
-.new-checkin-group{
+.new-checkin-group {
   display: grid;
   justify-content: center;
   justify-items: start;
@@ -73,7 +73,6 @@ h2 {
 #parking-checkbox {
   margin: 0 0 0 .5rem;
 }
-
 
 .card-button{
   border-radius: 5px;

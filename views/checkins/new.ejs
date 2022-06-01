@@ -5,12 +5,10 @@
   <div class="new-checkin-container">
     <h2 class="new-checkin-title">New Coffee Shop</h2>
     <main class="new-checkin-main">
-      
       <form id="new-form" action="/checkins" method="POST">
-        <ul class="new-checkin-group" style="padding: 0px;">
+        <ul class="new-checkin-group">
         <% if(user) { %> 
           <li class="new-checkin-group-item">
-            
               <label for="coffee-shop-input">Coffee Shop Name:</label>
               <input 
                 class="input"
@@ -86,7 +84,9 @@
             >
           </li>
           <br>
-          <button class="card-button" type="submit">Add Checkin</button>
+          <div class="new-checkin-btn-container">
+            <button class="card-button" type="submit">Add Checkin</button>
+          </div>
         </ul>
       </form>
         <% } %>
