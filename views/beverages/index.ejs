@@ -4,8 +4,7 @@
 
   <div class="new-beverage-container">
     <h1 class="beverage-title">Add New Beverages</h1>
-    <main class="beverage-main">
-      
+    <div class="beverage-div">
       <div class="form-list-container">
         <% if (user) { %>
           <form 
@@ -16,7 +15,7 @@
           >
             <label for="name-input">Drink:</label>
             <input 
-              class="beverage-input" 
+              class="beverage-input"
               type="text" 
               name="name" 
               id="name-input" 
@@ -29,6 +28,8 @@
           <h6>*Please only add drinks that are not on the list. Thank You!</h6>
         <% } %>
       </div>
+    </div>
+    <div class="beverage-div">
       <h3 class="beverage-list-title"><i class="fa-solid fa-mug-hot icon"></i> List:</h3>
       <div class="beverage-list-container">
         <div class="beverage-container" id="beverage-list">
@@ -39,7 +40,7 @@
           </ul>
         </div>
       </div>
-    </main>
+    </div>
   </div>
 
 
