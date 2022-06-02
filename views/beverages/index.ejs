@@ -3,7 +3,7 @@
 <%- include('../partials/nav') %>
 
   <div class="new-beverage-container">
-    <h1 class="beverage-title">Add New Beverages</h1>
+    <h1 class="beverage-title">Beverages</h1>
     <div class="beverage-div">
       <div class="form-list-container">
         <% if (user) { %>
@@ -29,11 +29,11 @@
         <% } %>
       </div>
     </div>
-    <div class="beverage-div">
+    <div class="beverage-div" id="beverage-div-2">
       <h3 class="beverage-list-title"><i class="fa-solid fa-mug-hot icon"></i> List:</h3>
       <div class="beverage-list-container">
         <div class="beverage-container" id="beverage-list">
-          <ul class="beverage-list">
+          <ul class="beverage-list-ul">
             <% beverage.forEach(beverages => { %>
               <li class="beverages">- <%= beverages.name %></li>
             <% }) %>

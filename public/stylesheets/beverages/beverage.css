@@ -10,10 +10,11 @@
   align-items: center;
   background-color: #b8bbc0;
   height: fit-content;
-  margin: 1.6rem;
   margin-top: 6rem;
   padding: .5rem;
 }
+
+
 
 .beverage-title {
   background-color: #667d83;
@@ -82,14 +83,15 @@ h6 {
   border-radius: 5px;
 }
 
-.beverage-list {
+.beverage-list-ul {
   background-color: #667d83;
   border-radius: 5px;
   box-shadow: .5px 1px .5px black;
   padding: 1rem 3rem;
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
 }
 
 .beverages {
@@ -97,4 +99,8 @@ h6 {
   padding: 0 1rem;
   margin: .2rem;
   box-shadow: .5px 1px .5px black;
+}
+
+#beverage-div-2 {
+  width: fit-content;
 }
