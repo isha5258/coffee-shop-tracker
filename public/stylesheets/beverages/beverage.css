@@ -10,8 +10,9 @@
   align-items: center;
   background-color: #b8bbc0;
   height: fit-content;
-  margin-top: 6rem;
+  margin-top: 3rem;
   padding: .5rem;
+  border-radius: 5px;
 }
 
 
@@ -22,7 +23,7 @@
   text-align: center;
   font-size: 3.6rem;
   margin: 3rem 0 .2rem;
-  width: clamp(20rem, 35vw, 40rem);
+  width: clamp(35rem, 35vw, 40rem);
   text-shadow: 1px 2px 2px black, 1px 2px 2px black;
   padding: .75rem;
   border-radius: 10px;
@@ -40,15 +41,17 @@
 }
 
 label{
-  padding: 0 .5rem 0 1rem ;
+  padding: .5rem 0 .5rem ;
   font-size: 1.6rem;
   background-color: #D3D3D3;
   border-radius: 5px;
+  
 }
 .beverage-form{
   background-color: #D3D3D3;
   border-radius: 5px;
-  padding: 0 .3rem .3rem 0;
+  height: 4rem;
+  padding: 0 1rem .4rem 1rem;
   box-shadow: .5px 1px .5px black;
 }
 
@@ -61,6 +64,7 @@ label{
 .beverage-button {
   border-radius: 5px;
   border: 0;
+  margin: 0 0 0 .5rem;
   box-shadow: .5px 1px .5px black, .5px 1px .5px black;
 }
 
@@ -68,17 +72,17 @@ label{
   background-color: #b8bbc0;
 }
 
-h6 {
+.disclaimer {
   margin: 1rem 0;
 }
 
 .beverage-list-title {
-  margin: 1rem 0;
+  margin: 7rem 0 0;
   background-color: #667d83;
   padding: 1rem;
   font-size: 2rem;
   text-shadow: 1px 2px 2px black, 1px 2px 2px black;
-  color: #b8bbc0;
+  color: #D3D3D3;
   box-shadow: .5px 1px .5px black;
   border-radius: 5px;
 }
@@ -87,7 +91,8 @@ h6 {
   background-color: #667d83;
   border-radius: 5px;
   box-shadow: .5px 1px .5px black;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
+  margin: 0 0 .25rem ;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -99,8 +104,12 @@ h6 {
   padding: 0 1rem;
   margin: .2rem;
   box-shadow: .5px 1px .5px black;
+  overflow: scroll;
+  border-radius: 5px;
 }
 
 #beverage-div-2 {
   width: fit-content;
+  margin: 3rem;
+  border-radius: 5px;
 }
